@@ -36,20 +36,47 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Start the ModelSim/Vivado software and Create a new project and add a Verilog file.
+
+2.Write the dataflow code for 8-to-3 encoder using continuous assignment statements (assign).
+
+3.Compile the code and check for errors.
+
+4.Write a testbench to apply all 8 input combinations.
+
+5.Simulate the design and observe output waveform. Verify the truth table and save results.
 
 **PROGRAM**
 
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:
-*/
+module encoder_8_to_3_dataflow (
 
+    input [7:0] I,
+    
+    output [2:0] Y
+    
+    );
+
+    // Continuous assignments for the outputs based on the input logic
+    
+    assign Y[0] = I[1] | I[3] | I[5] | I[7];
+    
+    assign Y[1] = I[2] | I[3] | I[6] | I[7];
+    
+    assign Y[2] = I[4] | I[5] | I[6] | I[7];
+    
+    endmodule
+    
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+
+<img width="1902" height="913" alt="image" src="https://github.com/user-attachments/assets/d2d131a1-15f6-4662-a4aa-eb552639d03b" />
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
 
 **RESULTS**
+
+The 8-to-3 encoder is successfully implemented using dataflow modeling, and the simulated output verifies the correct binary code generation for each valid input.
 
 
 
